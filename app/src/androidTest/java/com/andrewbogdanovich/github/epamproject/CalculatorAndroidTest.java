@@ -6,6 +6,7 @@ import android.support.test.espresso.ViewAssertion;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.junit.Test;
@@ -39,10 +40,19 @@ public class CalculatorAndroidTest {
                 }
             }
         });
-        onView(withId(R.id.input_first_field_edit_text)).perform(typeText("6"));
+        onView(withId(R.id.input_first_field_edit_text)).perform(typeText("4"));
         onView(withId(R.id.input_second_field_edit_text)).perform(typeText("2"));
 
         calculateButton.perform(click());
+
+        onView(withId(R.id.input_first_field_edit_text)).check(new ViewAssertion() {
+            @Override
+            public void check(View view, NoMatchingViewException noViewFoundException) {
+                if(!((EditText) view).getText().toString().equals("6")){
+                    throw new IllegalStateException("is not 6");
+                }
+            }
+        });
 
         onView(withId(R.id.result_text_view)).check(new ViewAssertion() {
             @Override
