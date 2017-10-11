@@ -1,6 +1,7 @@
 package com.andrewbogdanovich.github.epamproject;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.TextView;
  * Created by Andrew on 09.10.2017.
  */
 
-public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener {
+public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener, Comparable {
 
     EditText input_first_field_edit_text;
     EditText input_second_field_edit_text;
@@ -53,5 +54,10 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         } else result_text_view.setText("error");
 
 
+    }
+
+    @Override
+    public int compareTo(@NonNull Object o) {
+        return 0;
     }
 }
