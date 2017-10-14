@@ -13,7 +13,7 @@ import static org.mockito.Mockito.when;
 
 public class CalcTest {
 
-   
+
     @Test
     public void calcTest() {
         Comparable someMock = mock(CalculatorActivity.class);

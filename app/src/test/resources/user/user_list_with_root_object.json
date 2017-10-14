@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "First Name and Last Name",
+      "age": 20,
+      "city": "Example city"
+    },
+    {
+      "id": 2,
+      "name": "First Name 2 and 2 Last Name",
+      "age": 20,
+      "city": "Example city"
+    }
+  ],
+  "backendVersion": 1
+}

@@ -34,14 +34,15 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         result_text_view = (TextView) findViewById(R.id.result_text_view);
 
         calculate_button.setOnClickListener(this);
-    }
 
+    }
 
     @Override
     public void onClick(View v) {
         int firstArgument = 0;
         int secondArgument = 0;
         int result = 0;
+
 
         firstArgument = Integer.parseInt(input_first_field_edit_text.getText().toString());
         secondArgument = Integer.parseInt(input_second_field_edit_text.getText().toString());
