@@ -5,5 +5,5 @@ package com.andrewbogdanovich.github.epamproject;
  */
 
 public class Constants {
-    public static final int SDK_version = 21;
+    public static final int SDK_VERSION = 21;
 }

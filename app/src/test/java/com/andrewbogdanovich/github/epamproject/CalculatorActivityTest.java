@@ -19,7 +19,7 @@ import static junit.framework.Assert.assertFalse;
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class,
-        sdk = Constants.SDK_version
+        sdk = Constants.SDK_VERSION
 )
 
 public class CalculatorActivityTest {
