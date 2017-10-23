@@ -39,7 +39,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        int firstArgument = 0;
+       /* int firstArgument = 0;
         int secondArgument = 0;
         int result = 0;
 
@@ -52,7 +52,8 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
             result = firstArgument / secondArgument;
             result_text_view.setText(firstArgument + " / " + secondArgument + " = " + result);
 
-        } else result_text_view.setText("error");
+        } else result_text_view.setText("error");*/
+
 
 
     }

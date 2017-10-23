@@ -1,18 +1,41 @@
 package com.andrewbogdanovich.github.epamproject.http;
 
-import java.io.InputStream;
+import android.support.annotation.VisibleForTesting;
 
-/**
- * Created by Tom on 14.10.2017.
- */
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 
 public class HttpClient implements IHttpClient {
 
 
-    public static final String IMPLEMENT_HTTP_CLIENT = "implement httpClient";
+    private HttpURLConnection con;
 
     @Override
-    public InputStream request(String url) {
-        throw new IllegalStateException(IMPLEMENT_HTTP_CLIENT);
+    public void request(final String url, final ResponseListener listener) {
+        try {
+            final InputStream is = openStream(url);
+            listener.onResponse(is);
+            con.disconnect();
+        } catch (final Throwable t) {
+            listener.onError(t);
+        } finally {
+            if (con != null) {
+                con.disconnect();
+            }
+        }
+    }
+
+    @VisibleForTesting
+    InputStream openStream(final String url) throws IOException {
+        con = (HttpURLConnection) (new URL(url)).openConnection();
+        return con.getInputStream();
+    }
+
+    public interface ResponseListener {
+        void onResponse(InputStream pInputStream) throws Exception;
+        void onError(Throwable pThrowable);
     }
 }

@@ -55,8 +55,15 @@
                     API.</p>
                 <form>
                     <div class="input-group">
+                        <input type="text" class="form-cintrol input-lg" placeholder="Id"
+                               id="idInput"/>
                         <input type="text" class="form-control input-lg" placeholder="Name"
                                id="nameInput"/>
+                        <input type="text" class="form-control input-lg" placeholder="Age"
+                               id="ageInput"/>
+                        <input type="text" class="form-control input-lg" placeholder="City"
+                               id="cityInput"/>
+
                         <span class="input-group-btn">
                              <button class="btn btn-default btn-primary btn-group btn-lg"
                                      type="submit" id="helloButton">Say "Hello" &raquo;</button>
@@ -124,6 +131,7 @@
       }
       gapi.client.load(apiName, apiVersion, callback, apiRoot);
     }
+
 
 </script>
 <!--
