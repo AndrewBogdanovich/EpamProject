@@ -53,8 +53,8 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
             result_text_view.setText(firstArgument + " / " + secondArgument + " = " + result);
 
         } else result_text_view.setText("error");*/
-
-
+      //  new EndpointsAsyncTask().execute((Runnable) new Pair<Context, String>(CalculatorActivity.this, "Manfred"));
+        new UserListLoader().execute(CalculatorActivity.this);
 
     }
 

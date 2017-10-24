@@ -9,7 +9,7 @@ import java.util.List;
  */
 
 class UsersListWithObjectGson implements IUserList {
-    @SerializedName("users")
+    @SerializedName("items")
     private List<UserGson> mUserList;
 
     @SerializedName("backendVersion")

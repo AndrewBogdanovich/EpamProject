@@ -122,3 +122,6 @@ freeline.py
 freeline/
 freeline_project_description.json
 
+.idea/
+app/libs/
+app/src/main/res/drawable/
