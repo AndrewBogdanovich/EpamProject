@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.andrewbogdanovich.github.epamproject.activitys.CalculatorActivity;
+
 import org.junit.Test;
 
 import static android.support.test.espresso.Espresso.onView;

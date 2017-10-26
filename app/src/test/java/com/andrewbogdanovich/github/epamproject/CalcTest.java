@@ -1,5 +1,7 @@
 package com.andrewbogdanovich.github.epamproject;
 
+import com.andrewbogdanovich.github.epamproject.activitys.CalculatorActivity;
+
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;

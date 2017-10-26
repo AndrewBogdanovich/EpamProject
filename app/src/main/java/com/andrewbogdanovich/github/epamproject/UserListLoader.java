@@ -13,9 +13,7 @@ import com.andrewbogdanovich.github.epamproject.json.parsing.UsersListParserFact
 import java.io.InputStream;
 import java.util.List;
 
-/**
- * Created by Tom on 23.10.2017.
- */
+
 
 public class UserListLoader extends AsyncTask<Context, Void, String> {
     public static final String NO_DATA = "No data";

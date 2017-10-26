@@ -2,6 +2,8 @@ package com.andrewbogdanovich.github.epamproject;
 
 import android.view.View;
 
+import com.andrewbogdanovich.github.epamproject.activitys.CalculatorActivity;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

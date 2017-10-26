@@ -1,4 +1,4 @@
-package com.andrewbogdanovich.github.epamproject;
+package com.andrewbogdanovich.github.epamproject.activitys;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,9 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * Created by Andrew on 09.10.2017.
- */
+import com.andrewbogdanovich.github.epamproject.R;
+import com.andrewbogdanovich.github.epamproject.UserListLoader;
+
 
 public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener, Comparable {
 
@@ -53,7 +53,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
             result_text_view.setText(firstArgument + " / " + secondArgument + " = " + result);
 
         } else result_text_view.setText("error");*/
-      //  new EndpointsAsyncTask().execute((Runnable) new Pair<Context, String>(CalculatorActivity.this, "Manfred"));
+        //  new EndpointsAsyncTask().execute((Runnable) new Pair<Context, String>(CalculatorActivity.this, "Manfred"));
         new UserListLoader().execute(CalculatorActivity.this);
 
     }
