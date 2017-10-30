@@ -1,5 +1,7 @@
 package com.andrewbogdanovich.github.epamproject.activitys;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.andrewbogdanovich.github.epamproject.R;
-import com.andrewbogdanovich.github.epamproject.UserListLoader;
+import com.andrewbogdanovich.github.epamproject.fragments.LoginFragment;
+import com.andrewbogdanovich.github.epamproject.fragments.SuccessFragment;
 
 
 public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener, Comparable {
@@ -35,6 +38,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
 
         calculate_button.setOnClickListener(this);
 
+
     }
 
     @Override
@@ -53,13 +57,32 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
             result_text_view.setText(firstArgument + " / " + secondArgument + " = " + result);
 
         } else result_text_view.setText("error");*/
+
         //  new EndpointsAsyncTask().execute((Runnable) new Pair<Context, String>(CalculatorActivity.this, "Manfred"));
-        new UserListLoader().execute(CalculatorActivity.this);
+        //  new UserListLoader().execute(CalculatorActivity.this);
+
+        showFragment(new LoginFragment());
+
 
     }
 
     @Override
     public int compareTo(@NonNull Object o) {
         return 0;
+    }
+
+    private void showFragment(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.commit();
+    }
+
+
+    public void setLoginData() {
+        showFragment(new SuccessFragment());
+    }
+
+    public void hideSuccess() {
+        showFragment(new LoginFragment());
     }
 }

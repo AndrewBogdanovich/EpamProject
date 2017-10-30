@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EpamProject</string>
+    <string name="set">btn_login_text</string>
+    <string name="success">edit_text</string>
 </resources>

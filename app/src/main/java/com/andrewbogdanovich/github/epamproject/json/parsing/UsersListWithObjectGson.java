@@ -4,9 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-/**
- * Created by Tom on 14.10.2017.
- */
+
 
 class UsersListWithObjectGson implements IUserList {
     @SerializedName("items")

@@ -96,10 +96,11 @@
     // A function that attaches a "Say Hello" button click handler
     function enableClick() {
       document.getElementById('helloButton').onclick = function() {
-      var id = document.getElementById('idInput').value;
+        var id = document.getElementById('idInput').value;
         var name = document.getElementById('nameInput').value;
         var age = document.getElementById('ageInput').value;
         var city = document.getElementById('cityInput').value;
+
         gapi.client.myApi.sayHi({'id': id, 'name': name, 'age': age, 'city': city}).execute(
           function(response) {
             var outputAlertDiv = document.getElementById('outputAlert');

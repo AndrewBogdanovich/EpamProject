@@ -9,7 +9,6 @@
         android:id="@+id/calculate_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:enabled="true"
         android:onClick="onCalculate"
         android:text="divide" />
 
@@ -29,4 +28,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
