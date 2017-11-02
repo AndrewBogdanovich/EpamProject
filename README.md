@@ -1,2 +1,2 @@
 # EpamProject
-# HW Unit-tests
+# Training Android-project
