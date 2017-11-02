@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".activitys.LogInActivity"/>
         <activity android:name=".activitys.CalculatorActivity"/>
-        <activity android:name=".activitys.TwitterActivity"/>
+        <service android:name=".services.PlayerService"/>
+        <receiver android:name=".receivers.PlayReceiver"/>
     </application>
 
 </manifest>

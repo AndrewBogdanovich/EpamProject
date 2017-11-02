@@ -2,4 +2,7 @@
     <string name="app_name">EpamProject</string>
     <string name="set">btn_login_text</string>
     <string name="success">edit_text</string>
+    <string name="play">Play sound</string>
+    <string name="sign_in_button_info">Sign IN</string>
+    <string name="stop_play">stop sound</string>
 </resources>
